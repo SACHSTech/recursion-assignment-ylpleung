@@ -1,34 +1,27 @@
 package recursionAssignment;
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Before;
-import org.junit.jupiter.api.After;
 
 import recursionAssignment.Recursion;
+import java.io.*;
 
 public class RecursionTest{
     
-    @Before
-    public void beforeTest(){
-      // some steps to perform before tests are run
-    }
-    
+    //Before
     /**
      * An initial test
      */
-    @Test
+    //Test
     public void Test1(){
-        // make assertion statement(s)
-        // assertEquals(EXPECTEDVALUE, TESTVALUE);
-        // assertTrue(TESTBOOLEAN);
+        // count7(integer, n)
+        int n;
+        BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("enter number");
+        n = Integer.parseInt(keyboard.readLine());
+        count7(n);
     }
     
     // add more tests
     
-    @After
-    public void afterTest(){
-      // some steps to perform after tests are run
-    }
-    
-    
+    //After
+       
 }

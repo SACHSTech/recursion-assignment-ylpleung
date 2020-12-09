@@ -14,25 +14,24 @@ public class Recursion{
     }
   }
   
-  public static int count8(int N){
-    if (N==0){
-      return 0;
-    } else if (N%100 ==88){
-      return 2 + count8(N/10);
-    } else if (N%10 == 8){
-      return 1 + count8(N/10);
+  public static String changePi(String str){
+    if (str.equals("")){
+      return "";
+    }else if (str.substring (0,1).equals("pi")){
+      String strpi = "3.14";
+      return changePi(strpi+ str.substring(1));
     } else{
-      return 0 + count8(N/10);
+      return changePi(str.substring (0) + str.substring(1));
     }
   }
 
-  public static int countHi(String str){
+  public static String stringClean(String str){
     if (str.equals("")){
-        return 0;
-    } else if (str.substring (1,2).equals("hi")){
-      return 1 + countHi(str.substring(1));
+      return "";
+    }else if (str.substring (0).equals(str.substring (1))){
+      return  stringClean(str.substring(1)+str.substring (2));
     } else{
-      return 0 + countHi(str.substring(1));
+      return stringClean(str.substring(0)+str.substring(1));
     }
   }
 }

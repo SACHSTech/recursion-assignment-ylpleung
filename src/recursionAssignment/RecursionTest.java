@@ -27,8 +27,36 @@ public class RecursionTest{
       assertEquals(-1, Recursion.count7(42874));
     }
 
-    // add more tests
-    
+    @Test
+    public void Test4(){
+      assertEquals("3.143.14", Recursion.changePi("pipi"));
+    }
+
+    @Test
+    public void Test5(){
+      assertEquals("abcde" , Recursion.changePi("abcde"));
+    }
+
+    @Test
+    public void Test6(){
+      assertEquals("3.14neapple", Recursion.changePi("pineapple"));
+    }
+
+    @Test
+    public void Test7(){
+      assertEquals("piza", Recursion.stringClean("pizza"));
+    }
+
+    @Test
+     public void Test8(){
+      assertEquals("gmd", Recursion.stringClean("ggmmmdddd"));
+    }
+
+    @Test
+    public void Test9(){
+      assertEquals("jbkcoh", Recursion.stringClean("kbjdf"));
+    }
+
     //After
        
 }

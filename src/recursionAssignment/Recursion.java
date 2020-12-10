@@ -15,23 +15,23 @@ public class Recursion{
   }
   
   public static String changePi(String str){
-    if (str.equals("")){
-      return "";
-    }else if (str.substring (0,1).equals("pi")){
+    if (str.length()<2){
+      return str;
+    }else if (str.substring (0,2).equals("pi")){
       String strpi = "3.14";
-      return changePi(strpi+ str.substring(1));
+      return strpi +changePi(str.substring(2));
     } else{
-      return changePi(str.substring (0) + str.substring(1));
+      return str.substring(0,1) +changePi( str.substring(1));
     }
   }
 
   public static String stringClean(String str){
-    if (str.equals("")){
-      return "";
-    }else if (str.substring (0).equals(str.substring (1))){
-      return  stringClean(str.substring(1)+str.substring (2));
+    if (str.length()<2){
+      return str;
+    }else if (str.substring (0,1).equals(str.substring (1,2))){
+      return str.substring(1,2) + stringClean(str.substring (2));
     } else{
-      return stringClean(str.substring(0)+str.substring(1));
+      return str.substring(0,1) + stringClean(str.substring(1));
     }
   }
 }

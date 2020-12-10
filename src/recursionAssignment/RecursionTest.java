@@ -19,12 +19,12 @@ public class RecursionTest{
     @Test
     //fail
     public void Test2(){
-      assertEquals(0, Recursion.count7(3247235));
+      assertEquals(0, Recursion.count7(324235));
     }
     
     @Test
     public void Test3(){
-      assertEquals(-1, Recursion.count7(42874));
+      assertEquals(3, Recursion.count7(47774));
     }
 
     @Test
@@ -49,12 +49,12 @@ public class RecursionTest{
 
     @Test
      public void Test8(){
-      assertEquals("gmd", Recursion.stringClean("ggmmmdddd"));
+      assertEquals("gmd", Recursion.stringClean("ggmmdd"));
     }
 
     @Test
     public void Test9(){
-      assertEquals("jbkcoh", Recursion.stringClean("kbjdf"));
+      assertEquals("jbkcoh", Recursion.stringClean("jbkcoh"));
     }
 
     //After
